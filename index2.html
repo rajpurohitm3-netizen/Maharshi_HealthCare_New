@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahrshi 1.0 Beta</title>
+  <link rel="stylesheet" href="style2.css">
+  <!-- Place your dark CSS here or use link if external -->
+  <style>
+    /* ... your style2.css code exactly as posted in your query ... */
+  </style>
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h2>Mahrshi <span class="version">1.0 Beta</span></h2>
+        <p class="subtext">Your AI Health Assistant</p>
+      </div>
+      <div class="menu">
+        <div class="menu-item">🩺 Health Alerts</div>
+        <div class="menu-item">🤒 Disease Symptoms</div>
+        <div class="menu-item">💊 Medicines</div>
+        <div class="menu-item">📊 Reports</div>
+      </div>
+      <div class="whatsapp">
+        <p class="wa-text">We’re also available on</p>
+        <a href="https://wa.me/1234567890" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+          <span>WhatsApp</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Chat Area -->
+    <div class="chat-container">
+      <div class="chat-card">
+        <div class="chat-header">
+          <h1>Welcome to Mahrshi</h1>
+          <p>Ask me anything about health, medicines, or symptoms!</p>
+        </div>
+        <div class="chat-box" id="chat-box"></div>
+        <div class="chat-input">
+          <input type="text" id="user-input" placeholder="Type your message..." style="color: white">
+          <button id="send-btn">➤</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const sendBtn = document.getElementById('send-btn');
+    const userInput = document.getElementById('user-input');
+    const chatBox = document.getElementById('chat-box');
+
+    // Send on button click or Enter press
+    sendBtn.addEventListener('click', sendMessage);
+    userInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') sendMessage();
+    });
+
+    async function sendMessage() {
+      const message = userInput.value.trim();
+      if (!message) return;
+
+      // Add user's message
+      const userMsg = document.createElement('div');
+      userMsg.classList.add('chat-message', 'user-message');
+      userMsg.textContent = message;
+      chatBox.appendChild(userMsg);
+      chatBox.scrollTop = chatBox.scrollHeight;
+      userInput.value = "";
+
+      // Add "thinking..." placeholder
+      const botMsg = document.createElement('div');
+      botMsg.classList.add('chat-message', 'bot-message');
+      botMsg.textContent = "Mahrshi is thinking... 🤖";
+      chatBox.appendChild(botMsg);
+      chatBox.scrollTop = chatBox.scrollHeight;
+
+      try {
+        const res = await fetch("http://localhost:3000/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message })
+        });
+        const data = await res.json();
+        botMsg.textContent = data.reply;
+      } catch (error) {
+        botMsg.textContent = "⚠ Error connecting to server";
+      }
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+  </script>
+  
+ 
+</script>
+<button id="theme-toggle" style="position: fixed; bottom: 32px; right: 32px; z-index: 1500; padding: 12px 28px; border-radius: 12px; border: none; cursor: pointer; background: #056162; color: white; font-weight: 600; font-size: 1em;">Light Mode</button>
+
+
+<script>
+  // On page load, read saved mode and apply
+  function applyTheme(isLight) {
+    if (isLight) {
+      document.body.classList.add('light-mode');
+    } else {
+      document.body.classList.remove('light-mode');
+    }
+  }
+
+  // Read theme from localStorage (same key used on index page)
+  let lightModeOn = localStorage.getItem('theme') === 'light';
+  applyTheme(lightModeOn);
+
+  // Optional: if you have a toggle button on this page, add event listener as well:
+  const toggleBtn = document.getElementById('theme-toggle');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      lightModeOn = !lightModeOn;
+      localStorage.setItem('theme', lightModeOn ? 'light' : 'dark');
+      applyTheme(lightModeOn);
+    });
+  }
+
+  // Listen for changes from other tabs/pages and apply
+  window.addEventListener('storage', (e) => {
+    if (e.key === 'theme') {
+      lightModeOn = e.newValue === 'light';
+      applyTheme(lightModeOn);
+    }
+  });
+</script> 
+ <script src="index.js"></script>
+
+
+
+</body>
+</html>

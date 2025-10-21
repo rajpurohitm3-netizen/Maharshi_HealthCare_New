@@ -1,0 +1,961 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: whitesmoke;
+}
+.header {
+  width: 100%;
+  background:linear-gradient(90deg, #000000ff 0%, #262828 100%);
+  padding: 18px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.taskbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Keeps children at left/right */
+  max-width: 1800px; /* optional for large screens */
+}
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.taskbar-box i {
+  font-size: 2.1em;
+  color: skyblue;
+  background: rgba(255,255,255,0.15);
+  border-radius: 14px;
+  padding: 12px;
+  margin-right: 15px;
+}
+.taskbar-2 {
+  display: flex;
+  flex-direction: column;
+}
+.task h1 {
+  color: skyblue;
+  font-size: 1.35em;
+  margin-bottom: 2px;
+  font-weight: 700;
+}
+.task2 p {
+  color: skyblue;
+  font-size: 1em;
+  opacity: 0.95;
+}
+
+/* Right side controls */
+.header-controls {
+  
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+}
+/* Main widget background */
+#google_translate_element {
+  background: linear-gradient(90deg, #000000ff 0%, #262828 100%);
+  border-radius: 8px;
+  padding: 2px 12px;
+  box-shadow: 0 0 14px #17161699;
+  margin-right: 100px ;
+}
+
+/* Dropdown menu gradient */
+.goog-te-combo {
+  background:  skyblue;;
+  color: #000; /* Language menu text color */
+  border: none;
+  border-radius: 7px;
+  padding: 6px 14px;
+  font-weight: 600;
+  font-size: 1em;
+  box-shadow: 0 0 10px #ffffff44;
+  outline: none;
+  margin: 4px 0;
+}
+
+/* Make the language text inside dropdown black */
+.goog-te-combo option {
+  color:  skyblue;;
+  background: #f5f5f7; /* Keeps dropdown items readable */
+}
+
+/* Hide the Google Translate branding image for a cleaner look */
+.goog-te-gadget img {
+  display: none !important;
+}
+
+       
+/* .beta-btn {
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  padding: 7px 22px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.19s, color 0.18s;
+}
+.beta-btn:hover {
+  background: #fff;
+  color: #00b7e6;
+} */
+
+
+/* body text */ 
+
+/* /* .body {
+    display: flex;
+    /* height: 1000px; */
+    /* margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between; */
+/* }
+.body-img{
+    height: 250px;
+    width: 500px;
+}  */ 
+
+body {
+  margin: 0; 
+  font-family: 'Segoe UI', Arial, sans-serif; 
+  background:linear-gradient(90deg, #000000ff 0%, #262828 100%)
+}
+/* .body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+.main-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80vh;
+  padding: 48px 8vw;
+}
+
+.left-block {
+  max-width: 540px;
+}
+
+.info-badge {
+  background: black;
+  color: skyblue;
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 18px;
+  font-weight: 500;
+  font-size: 1em;
+  margin-bottom: 24px;
+}
+
+.main-heading {
+  font-size: 3em;
+  color:  skyblue;
+  margin-bottom: 0.2em;
+  font-weight: bold;
+}
+
+.subheading {
+  color:  skyblue;;
+  font-size: 1.2em;
+  margin-bottom: 1.6em;
+  line-height: 1.5;
+}
+
+.features {
+  margin-bottom: 2em;
+}
+
+.feature { 
+  display: inline-block;
+  padding: 7px 12px;
+  margin-right: 12px;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.feature.disease { color:skyblue; background: black;}
+.feature.symptom { color: lightgreen; background: black;}
+.feature.alert { color: #FFD580; background: black;}
+
+.action-buttons button {
+  font-size: 1.1em;
+  padding: 12px 32px;
+  border-radius: 12px;
+  margin-right: 16px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.start-btn {
+  background: rgb(0, 112, 201);
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(0,112,201,0.07);
+}
+
+.learn-btn {
+  background: rgb(247, 247, 250);
+  color: #222;
+  border: 1.8px solid #eee;
+}
+
+.right-block .hero-image {
+  width: 480px;
+  border-radius: 24px;
+  box-shadow: 0 4px 28px rgba(0,0,0,0.10);
+}
+
+.fa-shield{
+    color: #0070c9;
+}
+.fa-stethoscope{
+    color: #23c16b ;
+}
+.fa-triangle-exclamation {
+    color:#ff763b ;
+}
+.fa-user {
+    color: black;
+}
+
+.info-badge:hover{
+    box-shadow: 5px 5px 10px 2px rgba(55, 54, 54, 0.122);
+     transform: scale(1.045);
+  z-index: 2;
+  transition: 0.25s;
+}
+
+.feature.disease:hover{
+    box-shadow:5px 5px 10px 2px rgba(0, 111, 201, 0.221);
+     transform: scale(1.045);
+  z-index: 2;
+  transition: 0.25s;
+} 
+
+.feature.symptom:hover{
+    box-shadow: 5px 5px 10px 2px rgba(35, 193, 107, 0.221);
+     transform: scale(1.045);
+  z-index: 2;
+  transition: 0.25s;
+}
+
+.feature.alert:hover{
+    box-shadow: 5px 5px 10px 2px rgba(255, 118, 59, 0.221);
+     transform: scale(1.045);
+  z-index: 2;
+  transition: 0.25s;
+}
+
+.start-btn:hover{
+    box-shadow: 5px 5px 10px 2px rgba(0, 112, 201,0.3);
+     transform: scale(1.045);
+  z-index: 2;
+  transition: 0.25s;
+}
+
+.learn-btn:hover{
+  box-shadow:  5px 5px 10px 2px rgba(125, 125, 125, 0.3);
+    transform: scale(1.045);
+  z-index: 2;
+  transition: 0.25s;
+}
+
+/* help section */
+
+.body2{
+    padding-top: 20px;
+    background:linear-gradient(90deg, #000000ff 0%, #262828 100%)
+    
+}
+.help-section {
+  /* color: black; */
+  text-align: center;
+  margin-top: 64px;
+}
+
+.section-title {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.section-desc {
+  font-size: 1.08em;
+  color:  skyblue;
+  margin-bottom: 36px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  justify-items: center;
+  margin: 0 auto;
+  padding-bottom: 48px;
+}
+
+.help-card {
+ background-color: #130f40;
+background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+  border-radius: 20px;
+  padding: 32px 22px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.06);
+  width: 320px;
+  text-align: center;
+  margin-bottom: 16px;
+  transition: box-shadow 0.2s;
+}
+
+.help-card:hover {
+  box-shadow: 0 8px 40px rgba(40,100,180,0.10);
+}
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px auto;
+}
+
+.help-card h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.18em;
+  font-weight: bold;
+}
+
+.help-card p {
+  color:  skyblue;
+  font-size: 1em;
+  min-height: 40px;
+  margin-bottom: 16px;
+}
+
+.tags {
+  margin-bottom: 18px;
+}
+
+.tag {
+  background: linear-gradient(90deg, #000000ff 0%, #262828 100%);
+  border-radius: 14px;
+  padding: 5px 12px;
+  margin: 2px 6px;
+  font-size: 0.93em;
+  color:  skyblue;
+  display: inline-block;
+}
+
+.card-btn {
+  width: 90%;
+  padding: 10px 0;
+  background: #f5f6fa;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.08em;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 10px;
+  
+}
+
+
+.help-card:hover {
+  box-shadow: 0 12px 40px rgba(40,100,180,0.14);
+  transform: scale(1.045);
+  z-index: 2;
+  transition: 0.25s;
+}
+.help-card:hover .card-btn {
+  background: #166ff5;
+  color: #fff;
+}
+/* chat section */
+.chatbot{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chat-container {
+  width: 500px;
+  height: 530px;
+  background: #fff;
+  border-radius: 19px;
+  box-shadow: 0 4px 22px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  margin-top: 36px;
+  overflow: hidden;
+}
+
+.chat-header {
+  background: #087bf4;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 32px 16px 32px;
+}
+
+.chat-header .chat-avatar {
+  background: rgba(255,255,255,0.17);
+  border-radius: 16px;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7em;
+  margin-right: 8px;
+}
+
+.chat-header .chat-name {
+  font-weight: 700;
+  font-size: 1.16em;
+  margin-bottom: 3px;
+}
+
+.chat-header .chat-status {
+  font-size: 1em;
+  opacity: 0.85;
+}
+
+.chat-box {
+  flex: 1;
+  padding: 24px 36px 0 36px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.message {
+  max-width: 86%;
+  margin-bottom: 12px;
+  padding: 13px 18px;
+  border-radius: 16px;
+  line-height: 1.45;
+  font-size: 1.08em;
+  word-break: break-word;
+}
+
+.user {
+  align-self: flex-end;
+  background: #4cafef;
+  color: #fff;
+}
+
+.bot {
+  align-self: flex-start;
+  background: #f5f6fa;
+  color: #222;
+  border: 1.8px solid #edf0fa;
+}
+
+.msg-time {
+  font-size: 0.97em;
+  color: #888;
+  margin: -8px 0 6px 56px;
+}
+
+.input-area {
+  background: #f7f8fa;
+  display: flex;
+  padding: 15px 21px;
+  border-top: 1.5px solid #ebecee;
+  align-items: center;
+}
+
+input[type="text"] {
+  flex: 1;
+  background: #fff;
+  border: 1.2px solid #e2e3e7;
+  border-radius: 12px;
+  padding: 11px 16px;
+  font-size: 1em;
+  margin-right: 10px;
+  outline: none;
+  transition: border 0.18s;
+}
+input[type="text"]:focus {
+  border: 1.4px solid #087bf4;
+  color: black;
+}
+
+button {
+  background: #4cafef;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-size: 1.18em;
+  cursor: pointer;
+  transition: blue 0.2s;
+  margin-left: 6px;
+}
+button:hover {
+  background: #087bf4;
+}
+
+.suggestions {
+  padding: 0 21px 11px 21px;
+  background: #121212;
+  display: flex;
+  gap: 10px;
+}
+
+.suggestion-btn {
+  background: #f5f6fa;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.08em;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 14px;
+  margin-top: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  transition: blue 0.2s;
+}
+.suggestion-btn:hover {
+  background: #87c8ff;
+  color: #101010;
+}
+.chat-title {
+  font-weight: bold;
+  font-size: 1.22em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.chat-status {
+  font-size: 0.99em;
+  opacity: 0.88;
+}
+.chatlogo{
+    background-color: #0070c9;
+    display:flex;
+     flex-direction: column; 
+    flex-wrap: wrap;
+    align-items: flex-start;
+    /* justify-content: space-between; */
+}
+
+.heart{
+    margin-right: 15px;
+    margin-left: 10px;
+}
+.chat-status{
+    margin-left: 10px;
+}
+
+.whatsapp-fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366; /* WhatsApp green */
+    color: white;
+    width: 56px;           /* fixed width */
+    height: 56px;          /* fixed height matching width */
+    border-radius: 50%;    /* makes it perfectly round */
+    display: flex;         /* for centering icon */
+    align-items: center;   /* vertical center */
+    justify-content: center; /* horizontal center */
+    font-size: 28px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    z-index: 1000;
+    cursor: pointer;
+    padding: 0;            
+}
+
+/* media quer */
+/* ========================= */
+/* RESPONSIVE DESIGN STYLES */
+/* ========================= */
+
+/* Tablet screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .main-body {
+    flex-direction: column;
+    text-align: center;
+    padding: 32px 5vw;
+  }
+
+  .right-block .hero-image {
+    width: 70%;
+    margin-top: 24px;
+  }
+
+  .left-block {
+    max-width: 90%;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 12px 0;
+  }
+
+  .taskbar {
+    margin: 10px 0;
+  }
+
+  .button {
+    margin: 10px 0;
+  }
+
+  .main-heading {
+    font-size: 2.2em;
+  }
+
+  .subheading {
+    font-size: 1em;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .right-block .hero-image {
+    width: 100%;
+  }
+
+  .chat-container {
+    width: 95%;
+    height: 500px;
+  }
+}
+.location-options button.accent {
+  margin-bottom: 16px;
+}
+
+/* Map Style */
+
+.location-search {
+  padding: 54px 0;
+   background:linear-gradient(90deg, #000000ff 0%, #262828 100%);
+  color: #eaf6ff;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+.location-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 44px;
+  justify-content: center;
+}
+
+.location-left {
+  flex: 1.1;
+  min-width: 350px;
+}
+.location-title {
+  color:  skyblue;
+  font-size: 2.3em;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.location-desc {
+  font-size: 1.13em;
+  color:  skyblue;
+  margin-bottom: 24px;
+}
+
+.location-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.location-card {
+ background-color: #130f40;
+ background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+  border-radius: 14px;
+  padding: 28px 20px;
+  margin-bottom: 0;
+  box-shadow: 0 0 12px #2899ff22;
+}
+.location-card h3 {
+  color:  skyblue;
+  margin-bottom: 8px;
+  font-size: 1.17em;
+}
+.location-card p {
+  color:  skyblue;
+  margin-bottom: 16px;
+  font-size: 1em;
+}
+
+.accent {
+   background:linear-gradient(90deg, #000000ff 0%, #262828 100%);
+  color:  skyblue;
+  border: none;
+  padding: 7px 22px;
+  border-radius: 7px;
+  font-weight: 600;
+  box-shadow: 0 0 10px #2899ff44;
+  cursor: pointer;
+  font-size: 1em;
+  transition: #35d1ff 0.2s;
+}
+.accent:hover {
+  background: linear-gradient(90deg, #37d1ff 0%, #2899ff 100%);
+  color: white;
+}
+
+.location-map {
+  flex: 1;
+  min-width: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.location-map iframe {
+  border-radius: 18px;
+  border: 2px solid #2899ff;
+  box-shadow: 0 0 18px #2899ff3c;
+}
+
+/* Small mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    padding: 8px;
+    text-align: center;
+  }
+
+  .taskbar {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .taskbar-box {
+    margin: 5px;
+  }
+
+  .button button {
+    width: 100px;
+    height: 40px;
+    font-size: 0.9em;
+  }
+
+  .main-heading {
+    font-size: 1.7em;
+  }
+
+  .subheading {
+    font-size: 0.95em;
+  }
+
+  .info-badge {
+    font-size: 0.9em;
+    padding: 6px 12px;
+  }
+
+  .chat-container {
+    height: 450px;
+  }
+}
+
+body.light-mode {
+  background: linear-gradient(120deg, #b8eaff 0%, #e2f6e8 100%);
+}
+
+body.light-mode .header {
+  background: linear-gradient(90deg, #007cf0 0%, #00dfd8 100%);
+  
+}
+
+body.light-mode .heading {
+  background: linear-gradient(90deg, #00c6fb 0%, #fff 100%);
+  color: white;
+}
+
+body.light-mode .taskbar-box i {
+  color: white;
+  background: rgba(0,124,240,0.08);
+}
+
+body.light-mode .task h1,
+body.light-mode .task2 p {
+  color: white;
+}
+
+body.light-mode .info-badge,
+body.light-mode .accent,
+body.light-mode .tag {
+  background: #34c759;
+  color: white;
+}
+
+body.light-mode .beta-btn {
+  border: 2px solid #007cf0;
+  background: #e3f6ff;
+  color: #007cf0;
+}
+body.light-mode .beta-btn:hover {
+  background: #007cf0;
+  color: #fff;
+}
+
+body.light-mode #google_translate_element {
+  background: linear-gradient(90deg, #c7eaff 0%, #defcf0 100%);
+  box-shadow: 0 0 14px #beebff;
+}
+
+body.light-mode .goog-te-combo {
+  background: linear-gradient(90deg, #c7eaff 0%, #defcf0 100%);
+  color: #035fc4;
+}
+
+body.light-mode .main-heading,
+body.light-mode .section-title,
+body.light-mode .location-title,
+body.light-mode .help-card h3,
+body.light-mode .location-card h3 {
+  color: #1186d8;
+}
+
+body.light-mode .subheading,
+body.light-mode .section-desc,
+body.light-mode .location-desc,
+body.light-mode .help-card p,
+body.light-mode .location-card p {
+  color: #035fc4;
+}
+
+body.light-mode .card,
+body.light-mode .body2 {
+  background: transparent;
+}
+
+body.light-mode .healthcard,
+body.light-mode .location-card,
+body.light-mode .help-card {
+  background: linear-gradient(90deg, #ebfaff 0%, #fafefe 100%);
+  color: #003157;
+  box-shadow: 0 2px 18px #007cf044;
+}
+
+body.light-mode .healthcard h1,
+body.light-mode .healthcard h2 {
+  color: darkblue;
+}
+
+body.light-mode .healthcard iframe,
+body.light-mode .location-map iframe {
+  box-shadow: 0 2px 20px #007cf022;
+  border-radius: 14px;
+  border: 1.5px solid #c7eaff;
+}
+
+body.light-mode .start-btn,
+body.light-mode .learn-btn,
+body.light-mode .card-btn {
+  background: #007cf0;
+  color: #fff;
+}
+
+body.light-mode .start-btn:hover,
+body.light-mode .card-btn:hover {
+  background: #12c3eb;
+}
+body.light-mode .learn-btn:hover {
+  background: #13e6c7;
+  color: #fff;
+}
+
+body.light-mode .feature.disease { color: #007cf0; background: #e5f6ff;}
+body.light-mode .feature.symptom { color: #23c16b; background: #e9f7ef;}
+body.light-mode .feature.alert { color: #ff763b; background: #ffeee8;}
+
+body.light-mode .chat-header {
+  background: #0a92b1;
+  color: #fff;
+}
+
+body.light-mode .bot {
+  background: #f3faff;
+  color: #007cf0;
+  border: 1.8px solid #d8ffff;
+}
+
+body.light-mode .user {
+  background: #007cf0;
+  color: #fff;
+}
+
+body.light-mode .input-area,
+body.light-mode .suggestions {
+  background: #e7f6fe;
+}
+
+body.light-mode .suggestion-btn {
+  background: #cef0ff;
+  color: #035fc4;
+}
+body.light-mode .suggestion-btn:hover {
+  background: #007cf0;
+  color: #fff;
+}
+ body.light-mode .location-container{
+  background:  linear-gradient(120deg, #b8eaff 0%, #e2f6e8 100%);;
+ }
+
+ body.light-mode .location-search{
+  background: linear-gradient(120deg, #b8eaff 0%, #e2f6e8 100%);
+ }
+
+ #theme-toggle {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 1500;
+  padding: 14px 30px;
+  border-radius: 13px;
+  font-size: 1.07em;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+/* Dark mode: black button, white text */
+body:not(.light-mode) #theme-toggle {
+  background-color: white;
+  color: black;
+  box-shadow: 0 2px 10px #000000cc;
+}
+
+/* Light mode: white button, black text */
+body.light-mode #theme-toggle {
+  background-color: black;
+  color: white;
+  box-shadow: 0 2px 10px #ddddddcc;
+}

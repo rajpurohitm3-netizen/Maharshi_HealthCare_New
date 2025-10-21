@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="heading">
+        <h1>Qualified Doctors</h1>
+    </div>
+    <div class="card">
+        <div class="healthcard">
+            <div class="body">
+            <h1>Dr Nehal sandhu</h1>
+            <br>
+            <h2>MD physician</h2>
+            <br>
+           
+            <p>Address: Shantinikethan Complex, HB Kapadia School Rd, near HB Kapadiya High School, Visharam Nagar, Ghatlodiya, Memnagar, Ahmedabad, Gujarat 380052
+                <br>
+               Areas served: Naranpura and nearby areas
+               <br>
+               Hours: Open ⋅ Closes 9 pm
+               <br>
+                 Phone: 094260 50005
+                 <br>
+   
+               </div>
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7342.15245436621!2d72.52735395316752!3d23.05766679824196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e83580a8767fd%3A0x7401bf73cad35ba9!2sDr.%20Nehal%20Sadhu-%20Best%20General%20physician-%20Best%20MD%20physician-%20in%20Memnagar%2C%20Ahmedabad!5e0!3m2!1sen!2sin!4v1757248392055!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+       <div class="healthcard">
+            <div class="body">
+            <h1>Dr. Priyanka Prajapati</h1>
+            <br>
+            <h2>MD Medicine</h2>
+            <br>
+           
+            <p>Address: Atulya superspeciality hospital and icu ,2nd floor, Elite Magnum Bhuyangdev Cross Rd, Vardhmannagar Society, C.P. Nagar-1, Ghatlodiya, Ahmedabad, Gujarat 380061
+                <br>
+                Areas served: Ahmedabad
+               <br>
+                Hours: Open 24 hours
+               <br>
+                 Phone: 088660 42949
+                 <br>
+               </p>
+               </div>
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14683.874846321398!2d72.53102352638207!3d23.06160864357034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e8376b9bdfffd%3A0x2ae4d50226378bb9!2sDr.%20Priyanka%20Prajapati%20(M.D%20Medicine)%20-%20Consultant%20Physician%2C%20Diabetologist%20and%20Critical%20Care%20Specialist%20Ghatlodiya!5e0!3m2!1sen!2sin!4v1757249251812!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="healthcard">
+            <div class="body">
+            <h1>Dr. Paras Patel</h1>
+            <br>
+            <h2> Consultant Physician</h2>
+            <br>
+           
+            <p>Address: 504, Merlin Pentagon, Mahalaxmi Five Rd, Fatehpura, Paldi, Ahmedabad, Gujarat 380007
+                <br>
+               Areas served: PaldiAreas served: Paldi
+               <br>
+               Hours: Closed ⋅ Opens 9 am Mon
+
+               <br>
+                 Phone: 090163 01456
+                 <br>
+                 </div>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7344.73431538408!2d72.55645751840747!3d23.010287552220316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e853f1ae7aabd%3A0xb15e0e878744e7db!2sDr.%20Paras%20Patel%20%7C%20Health%20Aura%20Medical%20Clinic%20%7C%20Consultant%20Physician%20%7C%20Diabetologist%20%7C%20Paldi%20%7C%20Ahmedabad!5e0!3m2!1sen!2sin!4v1757249412178!5m2!1sen!2sin" width="600" height="450" style="border:0;width: 370px;;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <script>
+  // Apply theme inherited from index page via localStorage
+  (function () {
+    // Get stored theme
+    let lightModeOn = localStorage.getItem('theme') === 'light';
+
+    // Apply theme class
+    if (lightModeOn) {
+      document.body.classList.add('light-mode');
+    } else {
+      document.body.classList.remove('light-mode');
+    }
+
+    // Optional: listen to storage events to sync theme if changed elsewhere
+    window.addEventListener('storage', function (event) {
+      if (event.key === 'theme') {
+        let isLight = event.newValue === 'light';
+        if (isLight) {
+          document.body.classList.add('light-mode');
+        } else {
+          document.body.classList.remove('light-mode');
+        }
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
